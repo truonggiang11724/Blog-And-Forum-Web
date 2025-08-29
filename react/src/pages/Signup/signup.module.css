@@ -1,0 +1,48 @@
+.authCard {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    text-align: center;
+}
+
+.authHeading {
+    margin-bottom: 20px;
+    color: #16a34a;
+}
+
+.authInput {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.authButton {
+    width: 100%;
+    padding: 12px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.authButton:hover {
+    background: #15803d;
+}
+
+.authText {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.authLink {
+    color: #2563eb;
+    text-decoration: none;
+}

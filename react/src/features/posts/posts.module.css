@@ -1,0 +1,75 @@
+/* Hero */
+.hero {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 5%;
+}
+
+.heroHeading {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.heroContent {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.heroImage {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .heroHeading {
+        font-size: 24px;
+    }
+}
+
+/* Container */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 5%;
+    gap: 40px;
+}
+
+.createPostButton {
+    width: 120px;
+    padding: 12px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    position: fixed;
+    bottom: 100px;
+    right: 10px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        order: 2;
+    }
+
+    .blogs {
+        order: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroHeading {
+        font-size: 20px;
+    }
+}

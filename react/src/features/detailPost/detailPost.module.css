@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Detail post */
+.post {
+    flex: 4;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.postImage {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.postHeading {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.postContent {
+    line-height: 1.6;
+}
+
+
+
+/* Cột phải */
+.comments {
+    flex: 2;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.commentsHeading {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .comments {
+        order: 1;
+        /* Cho comments lên trên nếu muốn */
+    }
+}
+
+.postList {
+    margin: 32px 5px;
+}
+
+
+.blogCard {
+    padding: 10px 0px;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex: 5;
+    position: relative;
+}
+
+.blogCardImage {
+    width: 8rem;
+    height: 8rem;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.blogCardHeading {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.blogCardContent {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.blogCardInfo {
+    color: #999;
+    display: block;
+    margin-bottom: 10px;
+}

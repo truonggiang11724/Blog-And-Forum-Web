@@ -1,0 +1,42 @@
+
+/* Footer */
+.footer {
+    background: #fff;
+    padding: 40px 5%;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.footerText {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footerLink {
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footerIcon {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.footerIconLink {
+    margin-right: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 20px;
+    text-align: center;
+}

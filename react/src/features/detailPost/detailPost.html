@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết bài viết</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f4f6;
+    }
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      gap: 20px;
+    }
+    /* Cột trái */
+    .post {
+      flex: 3;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .post img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+    .post h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .post p {
+      line-height: 1.6;
+    }
+
+    /* Cột phải */
+    .comments {
+      flex: 1.5;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    .comments h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .comment-list {
+      flex: 1;
+      overflow-y: auto;
+      margin-bottom: 15px;
+      max-height: 300px;
+    }
+    .comment {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    .comment strong {
+      color: #333;
+    }
+    .comment-form textarea {
+      width: 100%;
+      height: 80px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: none;
+      margin-bottom: 10px;
+    }
+    .comment-form button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .comment-form button:hover {
+      background: #1d4ed8;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .comments {
+        order: -1; /* Cho comments lên trên nếu muốn */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Cột trái: Bài viết -->
+    <div class="post">
+      <h1>Tiêu đề bài viết</h1>
+      <img src="https://via.placeholder.com/800x400" alt="Ảnh minh họa">
+      <p>
+        Đây là nội dung chi tiết bài viết. Bạn có thể viết dài ở đây với nhiều đoạn văn,
+        hình ảnh và thông tin khác. Bố cục này được thiết kế để trông giống như một bài viết
+        trên blog hoặc trang tin tức.
+      </p>
+    </div>
+
+    <!-- Cột phải: Bình luận -->
+    <div class="comments">
+      <h2>Bình luận</h2>
+      <div class="comment-list">
+        <div class="comment">
+          <strong>Nguyễn Văn A</strong>
+          <p>Bài viết rất hay, cảm ơn bạn!</p>
+        </div>
+        <div class="comment">
+          <strong>Trần Thị B</strong>
+          <p>Mình cũng nghĩ như vậy 👍</p>
+        </div>
+      </div>
+
+      <form class="comment-form">
+        <textarea placeholder="Viết bình luận..."></textarea>
+        <button type="submit">Gửi</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

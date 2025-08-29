@@ -1,0 +1,62 @@
+.header {
+    background: #fff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.headerLinkGroup {
+    display: flex;
+    gap: 20px;
+}
+
+.headerLink {
+    font-size: 15px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .headerLinkGroup {
+        display: none;
+    }
+
+    /* Ẩn menu desktop */
+    .header {
+        justify-content: space-between;
+    }
+}
+
+.headerButton {
+    background: #ff4d00;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+@media (max-width: 480px) {
+    .headerButton {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+.logoutButton {
+    margin-left: 20px;
+    background: #6b6a6a;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.userName {
+    color: #f64a00;
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #f5f5f5;
+      color: #333;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header {
+      background: #fff;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header nav a {
+      margin: 0 15px;
+      font-size: 15px;
+      color: #333;
+    }
+    .btn {
+      background: #ff4d00;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 5px;
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 10%;
+    }
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #666;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    /* Blog Section */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 10%;
+      gap: 40px;
+    }
+    .sidebar {
+      flex: 1;
+    }
+    .sidebar h3 { margin-bottom: 15px; }
+    .sidebar ul {
+      list-style: none;
+    }
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+    .blogs {
+      flex: 3;
+    }
+    .blog-card {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .blog-card h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .blog-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .blog-card small {
+      color: #999;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .see-more {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      width: fit-content;
+      background: #ff4d00;
+      padding: 10px 20px;
+      border-radius: 6px;
+      color: #fff;
+    }
+
+    /* Membership */
+    .membership {
+      background: #fdfdfd;
+      padding: 50px 10%;
+      text-align: center;
+    }
+    .membership h2 {
+      margin-bottom: 30px;
+    }
+    .plans {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+    }
+    .plan {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1;
+      max-width: 400px;
+      text-align: left;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .plan h3 { margin-bottom: 10px; }
+    .plan p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .plan .btn {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #fff;
+      padding: 40px 10%;
+      margin-top: 40px;
+      border-top: 1px solid #eee;
+    }
+    footer p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    footer .links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    footer .social {
+      margin-top: 15px;
+    }
+    footer .social a {
+      margin-right: 10px;
+      color: #333;
+      font-size: 18px;
+    }
+    .copyright {
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo"><strong>WOKKA</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+    </nav>
+    <a href="#" class="btn">Contact us</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>How to Stay Cool While Waiting for Your AC Repair</h1>
+    <p>A limited MOHEIM POP UP shop will be held at Mitsukoshi Nihonbashi Department</p>
+    <a href="#" class="btn">Read full blog</a>
+    <img src="https://via.placeholder.com/1200x500" alt="Hero Image">
+  </section>
+
+  <!-- Blog List -->
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Quick Filters:</h3>
+      <ul>
+        <li><input type="checkbox"> UX Design</li>
+        <li><input type="checkbox"> Branding</li>
+        <li><input type="checkbox"> Web Development</li>
+        <li><input type="checkbox"> Design System</li>
+        <li><input type="checkbox"> Marketing</li>
+      </ul>
+      <h3 style="margin-top:20px;">Follow us on:</h3>
+      <div>
+        <a href="#">Fb</a> | 
+        <a href="#">Tw</a> | 
+        <a href="#">In</a>
+      </div>
+    </aside>
+    <div class="blogs">
+      <div class="blog-card">
+        <small>Brand Strategy | 2025-05-20</small>
+        <h4>Staying Cool During Blackouts: The Lifesaving ...</h4>
+        <p>A limited MOHEIM POP UP shop will be held at Mitsukoshi Nihonbashi Department Store from May 15th to June 4th.</p>
+        <a href="#">Read full blog</a>
+      </div>
+      <div class="blog-card">
+        <small>Brand Strategy | 2025-05-20</small>
+        <h4>What Does the Texas Grid Have to Do With My AC?</h4>
+        <p>A limited MOHEIM POP UP shop will be held at Mitsukoshi Nihonbashi Department Store from May 15th to June 4th.</p>
+        <a href="#">Read full blog</a>
+      </div>
+      <div class="blog-card">
+        <small>Brand Strategy | 2025-05-20</small>
+        <h4>Fall HVAC Maintenance Tips for Texas Homeowners</h4>
+        <p>A limited MOHEIM POP UP shop will be held at Mitsukoshi Nihonbashi Department Store from May 15th to June 4th.</p>
+        <a href="#">Read full blog</a>
+      </div>
+      <a href="#" class="see-more">See more blogs</a>
+    </div>
+  </div>
+
+  <!-- Membership -->
+  <section class="membership">
+    <h2>Become wokka member like you want</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Client</h3>
+        <p>Award-winning courses to explore at your own pace.</p>
+        <a href="#" class="btn">Join as a Client</a>
+      </div>
+      <div class="plan">
+        <h3>Service Provider</h3>
+        <p>Award-winning courses to explore at your own pace.</p>
+        <a href="#" class="btn">Join as a Service Provider</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Lorem ipsum dolor sit amet consectetur. Egestas cursus commodo consequat id.</p>
+    <div class="links">
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Community</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Announcements</a>
+      <a href="#">Cookie Preferences</a>
+    </div>
+    <div class="social">
+      <a href="#">Fb</a>
+      <a href="#">Tw</a>
+      <a href="#">In</a>
+    </div>
+    <p class="copyright">2024 © WeFix Inc. | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

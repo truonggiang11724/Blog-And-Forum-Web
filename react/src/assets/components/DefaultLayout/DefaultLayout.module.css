@@ -1,0 +1,21 @@
+.sidebarDefault {
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    width: 96%;
+    height: 32px;
+    background-color: aliceblue;
+    margin: 12px 20px;
+}
+
+.defaultHeader {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.sidebarDefault_link {
+    padding: 10px;
+}
+
