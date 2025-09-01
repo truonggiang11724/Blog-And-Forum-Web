@@ -1,61 +1,125 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 Blog & Forum Website - Laravel RESTful API + ReactJS
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Một dự án **Blog Website** được xây dựng với **Laravel (API backend)** và **ReactJS (frontend)**.  
+Mục đích chính: rèn luyện kỹ năng lập trình Front-end & Back-end, tối ưu hiệu năng, nâng cao kiến thức lập trình.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🌟 Tính năng nổi bật
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 👤 Quản lý người dùng (Users)
+- Đăng ký, đăng nhập, đăng xuất (JWT/Auth Sanctum).
+- Phân quyền: **User** & **Admin**.
+- CRUD tài khoản người dùng.
+- Phân trang danh sách user.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 📝 Quản lý bài viết (Posts)
+- CRUD bài viết (create, read, update, delete).
+- Gắn tác giả, slug, thumbnail, trạng thái (draft/published).
+- API Resource chuẩn RESTful.
+- Upload ảnh bài viết.
+- Phân trang + tìm kiếm + lọc bài viết.
 
-## Learning Laravel
+### 💬 Bình luận (Comments)
+- Người dùng đăng bình luận.
+- CRUD bình luận.
+- Quản lý bình luận từ admin.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 🏷️ Danh mục & Tag
+- Tạo & quản lý danh mục.
+- Gắn tag vào bài viết.
+- Lọc bài viết theo danh mục/tag.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🔎 Tìm kiếm & Lọc
+- Tìm kiếm bài viết theo tiêu đề/nội dung.
+- Lọc theo trạng thái, danh mục, tag.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 📊 Admin Dashboard
+- Thống kê số lượng bài viết, người dùng, bình luận.
+- Quản lý tất cả dữ liệu trong hệ thống.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ⚙️ Công nghệ sử dụng
 
-### Premium Partners
+### Backend (Laravel)
+- [Laravel 11](https://laravel.com) - RESTful API.
+- Laravel Sanctum - Authentication.
+- Eloquent ORM - Quản lý CSDL.
+- API Resource - Format dữ liệu trả về.
+- MySQL - Database.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Frontend (ReactJS)
+- [React 18](https://react.dev).
+- React Router - Routing SPA.
+- Redux Toolkit - Quản lý state.
+- Axios - Gọi API.
+- TailwindCSS - Giao diện.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📂 Cấu trúc thư mục
 
-## Code of Conduct
+### Backend (Laravel)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+app/
+├── Http/
+│ ├── Controllers/Api/ # Controllers cho API
+│ ├── Resources/ # API Resources
+│
+├── Models/ # Eloquent Models
+routes/
+├── api.php # Định nghĩa API routes
+database/
+├── migrations/ # Các file migration
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Frontend (ReactJS)
+src/
+├── api/ # Hàm gọi API bằng Axios
+├── components/ # Các component tái sử dụng ( Header, Footer,...)
+├── features/ # Các trang chức năng bao gồm cả Redux slices
+├── pages/ # Các trang (Home, Blog, Login,...)
+├── store/ # Redux store
+├── App.js # App chính
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🚀 Cài đặt & chạy dự án
+
+### 1️⃣ Backend - Laravel API
+```bash
+
+cp .env.example .env
+composer install
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
+
+API chạy tại: http://127.0.0.1:8000/api
+
+### 2️⃣ Frontend - ReactJS
+```bash
+cd react
+npm install
+npm start
+
+
+🔑 Demo API
+
+GET /api/posts → Danh sách bài viết.
+
+POST /api/posts → Tạo bài viết (yêu cầu login).
+
+PUT /api/posts/{id} → Cập nhật bài viết.
+
+DELETE /api/posts/{id} → Xóa bài viết.
+
+👨‍💻 Tác giả
+
+Tên: Nguyễn Trường Giang
+
+Email: [truonggiang11724@gmail.com]
+
+GitHub: https://github.com/truonggiang11724
